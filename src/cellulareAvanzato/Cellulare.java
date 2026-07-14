@@ -160,9 +160,9 @@ public class Cellulare {
 			System.out.println("Inserisci scelta:");
 			int scelta = n.nextInt();
 			if (scelta == 1) {
-				int n1 = (int) (Math.random() * 5) + 1;
-				int n2 = (int) (Math.random() * 5) + 1;
-				int n3 = (int) (Math.random() * 5) + 1;
+				int n1 = (int) (Math.random() * 3) + 1;
+				int n2 = (int) (Math.random() * 3) + 1;
+				int n3 = (int) (Math.random() * 3) + 1;
 				System.out.println("--------------------------------");
 				System.out.println("Risultato: [ " + n1 + " ] [ " + n2 + " ] [ " + n3 + " ]");
 				if (n1 == n2 && n2 == n3) {
