@@ -68,13 +68,20 @@ public class Registrazione {
     }
 
     public void setGiornoRegistrazione(int giornoRegistrazione) {
+
+        int[] giorniDelMese = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        
+        int maxGiorni = 31;
+        if (this.meseRegistrazione >= 1 && this.meseRegistrazione <= 12) {
+            maxGiorni = giorniDelMese[this.meseRegistrazione];
+        }
         boolean ancora = true;
         do {
-            if(giornoRegistrazione >= 1 && giornoRegistrazione <= 31) {
+            if(giornoRegistrazione >= 1 && giornoRegistrazione <= maxGiorni) {
                 this.giornoRegistrazione = giornoRegistrazione;
                 ancora = false;
             } else {
-                System.out.println("Il giorno deve essere compreso fra 1 e 31, reinserisci:");
+                System.out.println("Il giorno deve essere compreso fra 1 e " + maxGiorni + ", reinserisci:");
                 giornoRegistrazione = inputNumeri.nextInt();
             }
         } while(ancora);
