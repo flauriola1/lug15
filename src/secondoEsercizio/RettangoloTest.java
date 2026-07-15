@@ -6,7 +6,7 @@ public class RettangoloTest {
 	public static void main(String[] args)
 	{
 		Rettangolo ret1 = new Rettangolo();
-		Rettangolo ret2 = new Rettangolo();
+		Rettangolo ret2;
 		Scanner inputNumeri = new Scanner(System.in);
 		
 		System.out.println("Inserisci Base Primo Rettangolo:");
@@ -23,11 +23,12 @@ public class RettangoloTest {
 		
 		
 		System.out.println("Inserisci Base Secondo Rettangolo:");
-		ret2.setBase(inputNumeri.nextInt());
+		int ret2base = inputNumeri.nextInt();
 		
 
 		System.out.println("Inserisci Altezza Secondo Rettangolo:");
-		ret2.setAltezza(inputNumeri.nextInt());
+		int ret2altezza = inputNumeri.nextInt();
+		ret2 = new Rettangolo(ret2base, ret2altezza);
 		
 		int areaRet2 = ret2.calcolaArea();
 		ret2.stampaArea();
