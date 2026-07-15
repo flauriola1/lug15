@@ -72,8 +72,8 @@ public class Registrazione {
         int[] giorniDelMese = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         
         int maxGiorni = 31;
-        if (this.meseRegistrazione >= 1 && this.meseRegistrazione <= 12) {
-            maxGiorni = giorniDelMese[this.meseRegistrazione];
+        if (getMeseRegistrazione() >= 1 && getMeseRegistrazione() <= 12) {
+            maxGiorni = giorniDelMese[getMeseRegistrazione()];
         }
         boolean ancora = true;
         do {
@@ -146,9 +146,9 @@ public class Registrazione {
     	System.out.println("=============================================");
         System.out.println("     REGISTRAZIONE TV  ");
         System.out.println("=============================================");
-        System.out.println("Canale TV: " + canaleTelevisivo);
-        System.out.println("Data inizio: " + giornoRegistrazione + "/" + meseRegistrazione + "/" +  annoRegistrazione);
-        System.out.println("Ora inizio: " +  oraRegistrazione + ":" +  minutiRegistrazione);
-        System.out.println("Durata: " + durataRegistrazione + " minuti");
+        System.out.println("Canale TV: " + getCanaleTelevisivo());
+        System.out.println("Data inizio: " + getGiornoRegistrazione() + "/" + getMeseRegistrazione() + "/" + getAnnoRegistrazione());
+        System.out.println("Ora inizio: " +  getOraRegistrazione() + ":" +  getMinutiRegistrazione());
+        System.out.println("Durata: " + getDurataRegistrazione() + " minuti");
     }
 }
