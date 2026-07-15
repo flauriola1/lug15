@@ -23,6 +23,7 @@ public class CellulareTest {
 			System.out.println("Scelta 7: Gestisci Rubrica");
 			System.out.println("Scelta 8: Slot Machine");
 			System.out.println("Scelta 9: Spegni Cellulare");
+			System.out.println("--------------------------------");
 			System.out.println("Inserisci Scelta:");
 			
 			int scelta = n.nextInt();
